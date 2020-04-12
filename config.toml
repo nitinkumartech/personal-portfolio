@@ -1,0 +1,4 @@
+baseURL = "https://test.nitin-kumar.com/"
+languageCode = "en-us"
+title = "Nitin Kumar"
+theme = "academia-hugo"
