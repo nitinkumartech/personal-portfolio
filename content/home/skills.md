@@ -33,7 +33,7 @@ subtitle = "I AM REALLY GOOD AT THE FOLLOWING TECHNICAL SKILLS"
   parcent = "55%"
   
 [[feature]]
-  icon = "clouds"
+  icon = "cloud"
   icon_pack = "fas"
   name = "Mobility and Cloud"
   parcent = "95%"
