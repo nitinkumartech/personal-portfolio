@@ -2,16 +2,16 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:latest
+      - image: ubuntu:latest
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
 
       # install git
-      - run: sudo apt-get update
+      - run: apt-get update
 
-      - run: sudo apt-get install git
+      - run: apt-get install git
 
       # checkout the repository
       - checkout
