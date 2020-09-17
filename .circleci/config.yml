@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:latest
+      - image: ubuntu:19.04
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
@@ -11,11 +11,11 @@ jobs:
       # install git
       - run: apt-get update
 
-      - run: apt-get install git curl -y
+      - run: apt-get install git hugo -y
 
       #- run: curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \ | grep  browser_download_url \ | grep Linux-64bit.deb \ | grep -v extended \ | cut -d '"' -f 4 \ | wget -i -
 
-      - run: snap install hugo --channel=extended
+      #- run: snap install hugo --channel=extended
 
       # checkout the repository
       - checkout
