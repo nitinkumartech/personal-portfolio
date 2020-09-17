@@ -2,8 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:18.04
-    #working_directory: ~/hugo
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
@@ -12,8 +12,6 @@ jobs:
       - run: sudo apt-get update
 
       - run: sudo apt-get install git
-
-      - run: sudo apt-get install hugo
 
       # checkout the repository
       - checkout
