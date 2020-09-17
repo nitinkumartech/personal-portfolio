@@ -13,9 +13,9 @@ jobs:
 
       - run: apt-get install git curl -y
 
-      - run: curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \ | grep  browser_download_url \ | grep Linux-64bit.deb \ | grep -v extended \ | cut -d '"' -f 4 \ | wget -i -
+      #- run: curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \ | grep  browser_download_url \ | grep Linux-64bit.deb \ | grep -v extended \ | cut -d '"' -f 4 \ | wget -i -
 
-      - run: dpkg -i hugo*_Linux-64bit.deb
+      - run: snap install hugo --channel=extended
 
       # checkout the repository
       - checkout
