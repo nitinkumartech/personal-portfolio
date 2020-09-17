@@ -19,4 +19,4 @@ jobs:
       # install git submodules for managing third-party dependencies yep
       - run: git submodule sync && git submodule update --init
 
-      - run: ls
+      - run: hugo
